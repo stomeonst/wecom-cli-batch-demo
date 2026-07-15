@@ -4,6 +4,8 @@ Checked: 2026-07-15
 
 This is a credential-free technical sample for planning repeatable WeCom document and smart-sheet operations. It produces official command previews, idempotency behavior, bounded retry, and structured JSON logs.
 
+Service overview and public work: https://chris-saas-services.stomeonst123.chatgpt.site
+
 ## Current official facts
 
 1. Official repository: `WecomTeam/wecom-cli`.
@@ -38,4 +40,6 @@ Delete methods remain blocked in the sample. A real implementation should also r
 
 Chris is available for a small paid test-environment milestone covering authorization checks, batch document or smart-sheet planning, idempotent scripts, bounded retry, structured logs, and handover documentation. Production access, destructive operations, and live credentials remain outside the first milestone unless separately approved in writing.
 
-Contact: stomeonst123@gmail.com
+Service details: https://chris-saas-services.stomeonst123.chatgpt.site
+
+Contact: Chris at stomeonst123@gmail.com
