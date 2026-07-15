@@ -1,0 +1,13 @@
+{
+  "name": "wecom-cli-batch-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node src/cli.mjs --plan examples/project-tracker.json --simulate-transient add-seed-records",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

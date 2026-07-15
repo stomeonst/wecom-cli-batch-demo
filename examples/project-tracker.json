@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "project-delivery-tracker-preview",
+  "operations": [
+    {
+      "id": "create-project-tracker",
+      "idempotency_key": "demo-project-tracker-v1",
+      "category": "doc",
+      "method": "create_doc",
+      "params": {
+        "doc_type": 10,
+        "doc_name": "项目交付跟踪表"
+      }
+    },
+    {
+      "id": "inspect-default-sheet",
+      "idempotency_key": "demo-inspect-default-sheet-v1",
+      "category": "doc",
+      "method": "smartsheet_get_sheet",
+      "params": {
+        "docid": "DOCID_FROM_CREATE_STEP"
+      }
+    },
+    {
+      "id": "inspect-default-fields",
+      "idempotency_key": "demo-inspect-default-fields-v1",
+      "category": "doc",
+      "method": "smartsheet_get_fields",
+      "params": {
+        "docid": "DOCID_FROM_CREATE_STEP",
+        "sheet_id": "SHEET_ID_FROM_INSPECTION"
+      }
+    },
+    {
+      "id": "add-seed-records",
+      "idempotency_key": "demo-add-seed-records-v1",
+      "category": "doc",
+      "method": "smartsheet_add_records",
+      "params": {
+        "docid": "DOCID_FROM_CREATE_STEP",
+        "sheet_id": "SHEET_ID_FROM_INSPECTION",
+        "records": [
+          {
+            "values": {
+              "任务名称": [
+                {
+                  "type": "text",
+                  "text": "确认交付范围"
+                }
+              ],
+              "状态": [
+                {
+                  "text": "待处理"
+                }
+              ]
+            }
+          },
+          {
+            "values": {
+              "任务名称": [
+                {
+                  "type": "text",
+                  "text": "完成上线检查"
+                }
+              ],
+              "状态": [
+                {
+                  "text": "待处理"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "add-seed-records-duplicate",
+      "idempotency_key": "demo-add-seed-records-v1",
+      "category": "doc",
+      "method": "smartsheet_add_records",
+      "params": {
+        "docid": "DOCID_FROM_CREATE_STEP",
+        "sheet_id": "SHEET_ID_FROM_INSPECTION",
+        "records": []
+      }
+    }
+  ]
+}
