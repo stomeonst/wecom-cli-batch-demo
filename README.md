@@ -33,3 +33,9 @@ The demo intentionally simulates one transient failure on `add-seed-records`. Th
 This sample proves local orchestration logic only. It has not called the real `wecom-cli`, created a WeCom document, accessed a client environment, or demonstrated production deployment. Replace the mock adapter only after the client provides an authorized test enterprise, scoped credentials, a non-production acceptance case, and explicit approval for each operation class.
 
 Delete methods remain blocked in the sample. A real implementation should also resolve returned `docid`, `sheet_id`, field IDs, and record IDs between steps instead of using visible placeholders.
+
+## Optional paid implementation
+
+Chris is available for a small paid test-environment milestone covering authorization checks, batch document or smart-sheet planning, idempotent scripts, bounded retry, structured logs, and handover documentation. Production access, destructive operations, and live credentials remain outside the first milestone unless separately approved in writing.
+
+Contact: stomeonst123@gmail.com
